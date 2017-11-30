@@ -75,3 +75,22 @@ Please just execute the following command to install:
 ``` r
 devtools::install_github("koheiw/stopwords")
 ```
+
+How to use
+----------
+
+The interface of the **stopwords** package is designed to be consistent with **quanteda**, but the words are considerably different:
+
+``` r
+head(quanteda::stopwords('english'), 10)
+```
+
+    ##  [1] "i"         "me"        "my"        "myself"    "we"       
+    ##  [6] "our"       "ours"      "ourselves" "you"       "your"
+
+``` r
+head(stopwords::stopwords('en'), 10)
+```
+
+    ##  [1] "'ll"       "'tis"      "'twas"     "'ve"       "10"       
+    ##  [6] "39"        "a"         "a's"       "able"      "ableabout"

@@ -22,3 +22,13 @@ Please just execute the following command to install:
 ```{r, eval=FALSE}
 devtools::install_github("koheiw/stopwords")
 ```
+
+## How to use
+
+The interface of the **stopwords** package is designed to be consistent with **quanteda**, but the words are considerably different:
+
+```{r}
+head(quanteda::stopwords('english'), 10)
+head(stopwords::stopwords('en'), 10)
+```
+
