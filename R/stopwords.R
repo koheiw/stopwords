@@ -11,6 +11,7 @@
 #' stopwords('en')
 #' stopwords('jp')
 stopwords <- function(langauge = 'en') {
+    langauge <- tolower(langauge)
     load('data/data_char_stopwords_iso.RData')
     if (!langauge %in% names(data_char_stopwords_iso))
         stop(paste0("\"", langauge, "\" is not in Stopwords ISO library."))
@@ -25,7 +26,10 @@ stopwords <- function(langauge = 'en') {
 #' languages()
 languages <- function() {
     load('data/data_char_stopwords_iso.RData')
-    names(data_char_stopwords_iso)
+    code <- names(data_char_stopwords_iso)
+    labels <- na.omit(ISOcodes::ISO_639_2[,c('Alpha_2', 'Name')])
+    names(code) <- labels$Name[match(code, labels$Alpha_2)]
+    return(code)
 }
 
 #' Internal function to update the data file
