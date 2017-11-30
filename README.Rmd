@@ -1,3 +1,7 @@
+---
+output: github_document
+---
+
 # Multi-lingual stopwords package in R
 
 **stopwords** is an R package that provides easy access to stopwords in more than 50 languages in the [Stopwords ISO library](https://github.com/stopwords-iso/stopwords-iso). This package can be used in conjunction with packages such as [**quanteda**](https://github.com/kbenoit/quanteda) to perform text analysis in many different languages.
