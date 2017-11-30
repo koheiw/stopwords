@@ -1,11 +1,15 @@
 Package: stopwords
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Collection of Stopwords in Multiple Langauges
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Kohei Watanabe <watanabe.kohei@gmail.com>
+Maintainer: Kohei Watanabe <watanabe.kohei@gmail.com>
+Description: This package makes multi-lingual text analysis easier by providing R interface to the Stopwords ISO library.
+License: MIT
 Encoding: UTF-8
+Collate:
+    stopwords.R
+Imports:
+    rjson  
 LazyData: true
+RoxygenNote: 6.0.1
